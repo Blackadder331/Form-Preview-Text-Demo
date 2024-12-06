@@ -1,0 +1,26 @@
+<div class="field">
+  <input
+    type="email"
+    name="customer[email]"
+    class="full"
+    value=""
+    autocomplete="email"
+    autocorrect="off"
+    autocapitalize="off"
+    placeholder="Email address"
+    id="customer_email"
+  />
+  <label for="customer_email">Email address</label>
+</div>
+
+<script>
+  const emailInput = document.getElementById("customer_email");
+
+  emailInput.addEventListener("focus", function () {
+    this.placeholder = "";
+  });
+
+  emailInput.addEventListener("blur", function () {
+    this.placeholder = "Email address";
+  });
+</script>
